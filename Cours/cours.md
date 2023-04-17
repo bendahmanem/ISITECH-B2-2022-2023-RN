@@ -35,12 +35,55 @@ const App = props => {
 }
 ```
 
+### Principes de developpement: Le developpement mobile natif
+
+Android studio : 
+
+Virtual device manager : 
+
+SDK manager : 
+
+Code source -> compilation -> executable
+
 
 ### Principes de developpement: Les Core components
 
 RN fournit un nombre de `core components` pre integres qui permettent de couvrir un large eventail de possibilites de developpement. Ils repondent aux besoins les plus courants de la plupart des applications mobiles les plus simples.
 
 https://reactnative.dev/docs/components-and-apis
+
+
+### Installation (Android)
+
+Il exsite deux manieres de mettre en place son environnement dev: 
+
+- Expo et Expo Go (debutant friendly)
+- React native CLI
+
+Expo est un ensemble d'outils construit autour de React Native, et est la methode la plus rapide
+pour commencer a developper sans avoir a trop se soucier de la configuration du projet.
+
+
+Pre requis : 
+ - Node JS (Version LTS) installe sur la machine
+
+Pour creer un projet avec expo il suffit de taper la commander suivante : 
+``` bash 
+npx create-expo-app AwesomeProject
+
+cd AwesomeProject
+npx expo start
+```
+
+Une fois l'installation terminee on obtient une application
+RN dont la structure des fichiers et dossiers rappelle fortement un projet React.
+
+Pour lancer l'application : 
+ ``` 
+ npm start
+ ```
+
+ qui utilise la lib Expo pour lancer notre application. 
 
 
 #### Le composant View
