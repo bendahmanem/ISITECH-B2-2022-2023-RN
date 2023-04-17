@@ -102,7 +102,8 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const LotsOfStyles = () => {
   return (
-    <View style={styles.container}>
+    <View style={{styles.container}}>
+
       <Text style={styles.red}>just red</Text>
       <Text style={styles.bigBlue}>just bigBlue</Text>
       <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
@@ -127,3 +128,47 @@ const styles = StyleSheet.create({
 
 export default LotsOfStyles;
  ```
+
+
+## Rappel CSS : Flex 
+Doc: https://developer.mozilla.org/fr/docs/Web/CSS/flex
+
+## Design en React Native
+
+### Flex
+
+
+
+
+### Style
+
+### Height Width
+
+Il est courant d'attribuer des hauteurs et largeurs fixes en 
+pixel en developpement web. En React Native ces valeurs 
+sont **sans unites**, et representent des `density independant pixels`: 
+
+``` javascript
+import React from 'react';
+import {View} from 'react-native';
+
+const FixedDimensionsBasics = () => {
+  return (
+      <View
+        style={{
+          width: 50,
+          height: 50,
+          backgroundColor: 'powderblue',
+        }}
+      >
+      </View>
+  )}
+```
+
+
+On peut utiliser des valeurs en % d'une valeur fixe, il faut s'assurer alors que le composant parent dispose d'une hauteur ou largeur fixe afin que le calcul du pourcentage dispose d'une valeur de reference
+
+
+### Images en RN
+https://reactnative.dev/docs/images
+// TODO: fill this part 

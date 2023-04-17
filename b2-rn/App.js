@@ -28,19 +28,18 @@ const styles = StyleSheet.create({
   },
   containerFlex: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: 'orange'
   },
   blueFlexItem : {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'blue'
   },
   greenFlexItem : {
-    flex: 1,
+    flex: 5,
     backgroundColor: 'green'
   },
   yellowFlexItem : {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'yellow'
   },
 });
