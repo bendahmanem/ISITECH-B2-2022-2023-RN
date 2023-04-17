@@ -1,14 +1,32 @@
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
+  const [enteredTodo, setEnteredTodo] = useState('test')
+
+  const changeTextHandler = (pEnteredTodo) => {
+    setEnteredTodo(pEnteredTodo)
+  }
+
+  const changeTodoHandler = () => {
+    console.log(enteredTodo)
+  }
+
   return (
     <View style={styles.containerFlex}>
       <View style={styles.blueFlexItem}>
       <Text>Blue</Text>
       </View>
       <View style={styles.greenFlexItem}>
-      <Text>Green</Text>
+      <Text>{enteredTodo}</Text>
+      <TextInput 
+        placeholder='Entrer nouvelle valeur de state'
+        onChangeText={changeTextHandler}
+       />
+       <Button
+        onPress={changeTodoHandler}
+        title='Create todo' /> 
       </View>
       <View style={styles.yellowFlexItem} >
       <Text>Yellow</Text>
@@ -28,7 +46,6 @@ const styles = StyleSheet.create({
   },
   containerFlex: {
     flex: 1,
-    backgroundColor: 'orange'
   },
   blueFlexItem : {
     flex: 2,
@@ -36,7 +53,8 @@ const styles = StyleSheet.create({
   },
   greenFlexItem : {
     flex: 5,
-    backgroundColor: 'green'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   yellowFlexItem : {
     flex: 2,

@@ -172,3 +172,10 @@ On peut utiliser des valeurs en % d'une valeur fixe, il faut s'assurer alors que
 ### Images en RN
 https://reactnative.dev/docs/images
 // TODO: fill this part 
+
+
+
+
+
+## Gerer les evenements en RN
+
