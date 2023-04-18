@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native"
-import { ProgressBar, MD3Colors, Button } from 'react-native-paper';
+import {TextInput, Button } from 'react-native-paper';
 
 function SecondView() {
+  const [textInput, setTextInput] = useState('')
+  const writeTextFileHandler = () => {
+    const textContent = 'some text content'
+    
+  }
   return (
     <View style={styles.main}>
-      <Button icon='camera' mode="contained" >Paper Button</Button>
-      <ProgressBar  progress={0.5} color={MD3Colors.error50} />
+      <TextInput value={textInput} />
+      <Button icon='camera' mode="contained" onPress={writeTextFileHandler} >Paper Button</Button>
     </View>
   )
 }
