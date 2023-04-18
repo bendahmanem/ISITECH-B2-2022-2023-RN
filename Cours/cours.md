@@ -179,3 +179,37 @@ https://reactnative.dev/docs/images
 
 ## Gerer les evenements en RN
 
+(cf code)
+
+## Gerer la navigation entre les ecrans 
+
+De maniere generale une application mobile est rarement constitue
+d'un seul ecran, RN met a disposition React native navigation , qui fournit une solution tres simple pour la mise en place de la navigation in app.
+
+Pour l'ajouter a votre projet RN: 
+
+``` bash
+npm install @react-navigation/native @react-navigation/native-stack
+```
+
+Si vous utilisez expo, installez des dependances supplementaires avec la commande suivante : 
+``` bash
+npx expo install react-native-screens react-native-safe-area-context
+```
+
+On fournit les fonctionnalites de react-navigation/native en `wrappant` toute 
+notre application avec la balise `NavigationContainer` : 
+``` jsx
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      {/* Rest of your app code */}
+    </NavigationContainer>
+  );
+};
+
+export default App;
+```

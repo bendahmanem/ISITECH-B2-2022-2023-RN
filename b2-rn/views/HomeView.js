@@ -2,7 +2,8 @@ import { StatusBar } from "expo-status-bar"
 import { useState } from "react"
 import { Button, StyleSheet, Text, TextInput, View } from "react-native"
 
-const HomeView = () => {
+const HomeView = ({navigation}) => {
+  
     const [enteredTodo, setEnteredTodo] = useState('test')
 
     const changeTextHandler = (pEnteredTodo) => {
@@ -29,7 +30,9 @@ const HomeView = () => {
                     title='Create todo' />
             </View>
             <View style={styles.yellowFlexItem} >
-                <Text>Yellow</Text>
+            <Button
+                    onPress={() => {navigation.navigate('Second')}}
+                    title='Go to second page' />
             </View>
 
             <StatusBar style="auto" />
@@ -61,7 +64,8 @@ const styles = StyleSheet.create({
     },
     yellowFlexItem: {
       flex: 2,
-      backgroundColor: 'yellow'
+      justifyContent: 'center',
+      alignItems: 'center'
     },
   });
   
