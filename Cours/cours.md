@@ -213,3 +213,23 @@ const App = () => {
 
 export default App;
 ```
+
+
+## Chercher et installer uen bibliotheque de composant RN
+
+### React Native Paper
+
+
+## Usage du systeme de fichier
+
+Expo met a disposition une lib qui permet d'effectuer les operations relatives a la gestion 
+du  systeme de fichier de l'appareil mobile. 
+
+
+inserez une image ici 
+
+
+Pour l'installer : 
+``` bash
+npx expo install expo-file-system
+```
