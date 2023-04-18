@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar"
 import { useState } from "react"
 import { Button, StyleSheet, Text, TextInput, View } from "react-native"
-
 const HomeView = ({navigation}) => {
   
     const [enteredTodo, setEnteredTodo] = useState('test')
