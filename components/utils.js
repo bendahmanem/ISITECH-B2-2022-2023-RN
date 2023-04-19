@@ -1,5 +1,6 @@
 import * as FileSystem from 'expo-file-system'
 import { readAsStringAsync} from 'expo-file-system'
+import * as MailComposer from 'expo-mail-composer'
 
 export const writeFile = async (data) => {
     // verifier le contenu de data 
